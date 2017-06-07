@@ -9,6 +9,24 @@ class Loop {
     this.animationFrame = animationFrame;
   }
   
+  get dt() {
+    return this.targetDt;
+  }
+  
+  get FPS() {
+    return 1000 / this.targetDt;
+  }
+  
+  set dt(val) {
+    this.targetDt = val;
+    return this;
+  }
+  
+  set FPS(val) {
+    this.targetDt = 1000/val;
+    return this;
+  }
+  
   tick() {
     const now = Date.now();
     this.lastDt = now - this.then;
@@ -23,11 +41,6 @@ class Loop {
         this.loopId = setTimeout(this.tick.bind(this), this.targetDt)
       }
     }
-  }
-  
-  setDt(val) {
-    this.targetDt = val;
-    return this;
   }
   
   start() {
