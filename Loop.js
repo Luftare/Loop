@@ -19,12 +19,10 @@ class Loop {
   
   set dt(val) {
     this.targetDt = val;
-    return this;
   }
   
   set FPS(val) {
     this.targetDt = 1000/val;
-    return this;
   }
   
   tick() {
