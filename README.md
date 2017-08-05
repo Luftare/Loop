@@ -5,11 +5,11 @@ Loop.js is a simple library for loops with added functionality compared to the n
 <script src="Loop.js"></script>
 ```
 ## Examples
-Set up a loop.
+Set up a loop. Provide an options object where the `onTick` is the function to be called on each cycle.
 ```javascript
-let loop = new Loo({
+let loop = new Loop({
   dt: 20,
-  ontick(dt) {
+  onTick(dt) {
     console.log(dt);//time of previous cycle in ms
   }
 });
@@ -17,7 +17,6 @@ let loop = new Loo({
 ### Starting and stopping
 ```javascript
 loop.start();
-
 setTimeout(loop.stop, 1000);//stop loop after 1s
 setTimeout(loop.start, 2000);//start loop again after 2s
 ```
