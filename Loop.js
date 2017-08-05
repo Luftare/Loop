@@ -1,5 +1,5 @@
 class Loop {
-  constructor({dt = 1000 / 60, animationFrame = false, onTick = function(){}}){
+  constructor({dt = 1000 / 60, animationFrame = false, onTick = function(){}, autoStart = false}){
     this.then = 0;
     this.running = false;
     this.targetDt = dt;
@@ -7,6 +7,7 @@ class Loop {
     this.lastDt = 0;
     this.loopId = 0;
     this.animationFrame = animationFrame;
+    if(autoStart) this.start();
   }
   
   get dt() {
