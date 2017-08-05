@@ -26,9 +26,10 @@ let options = {
   animationFrame: true,//use requestAnimationFrame instead of setTimeout, dt and FPS properties are ignored if value is set true
   FPS: 60,//alternative to the dt property - provide frames per second (FPS)
   dt: 16,//alternative to the FPS - provide target time between two cycles
+  autoStart: true,//starts the loop automatically
 };
 
-let loop = new Loop(options)
+let loop = new Loop(options);
 ```
 ### Getters and setters
 Get and set either the FPS or dealt time (dt) format while both change the frequency of the loop.
