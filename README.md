@@ -1,4 +1,4 @@
-# Loop utility library
+# Loop
 Loop.js is a simple library for loops with added functionality compared to the native `setInterval`. Example application areas include game prototypes and animations. Delta time between cycles (ie. frequency) can be changed on the fly and the loop can be paused and restarted again. Loop provides the actual `dt` of the previous cycle which can be used for dynamic timestep calculations.
 ## How to install
 ```html
