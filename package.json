@@ -1,5 +1,5 @@
 {
-  "name": "Loop",
+  "name": "loop",
   "version": "1.0.0",
   "description": "Loop.js is a simple library for loops with added functionality compared to the native `setInterval`. Example application areas include game prototypes and animations. Delta time between cycles (ie. frequency) can be changed on the fly and the loop can be paused and restarted again. Loop provides the actual `dt` of the previous cycle which can be used for dynamic timestep calculations. ## How to install ```html <script src=\"Loop.js\"></script> ``` ## Examples Set up a loop. Provide an options object where the `onTick` is the function to be called on each cycle. ```javascript let loop = new Loop({   dt: 20,   onTick(dt) {     console.log(dt);//time of previous cycle in ms   } }); ``` ### Starting and stopping ```javascript loop.start(); setTimeout(loop.stop, 1000);//stop loop after 1s setTimeout(loop.start, 2000);//start loop again after 2s ``` ### Options ```javascript let options = {   animationFrame: true,//use requestAnimationFrame instead of setTimeout, dt and FPS properties are ignored if value is set true   FPS: 60,//alternative to the dt property - provide frames per second (FPS)   dt: 16,//alternative to the FPS - provide target time between two cycles   autoStart: true,//starts the loop automatically };",
   "main": "Loop.js",
