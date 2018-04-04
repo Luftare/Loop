@@ -1,4 +1,4 @@
-class Loop {
+export default class Loop {
   constructor({dt = 1000 / 60, animationFrame = false, onTick = function(){}, autoStart = false}){
     this.then = 0;
     this.running = false;
